@@ -100,14 +100,16 @@
           <div class="row g-0 align-items-center">
             <div class="col-lg-6 content-col">
               <div class="content-wrapper">
-                <div class="status-badge">Authentisches Türkische</div>
+                <div class="status-badge">
+                  Authentisches türkisches Frühstück
+                </div>
 
                 <h2>Genießen Sie den Moment</h2>
 
                 <p>
                   Bei Abla's Frühstück erwarten Sie frisch zubereitete
                   Spezialitäten, klassische türkische Frühstücksgerichte und
-                  eine herzliche Atmosphäre; perfekt zum Ankommen, Teilen und
+                  eine herzliche Atmosphäre – perfekt zum Ankommen, Teilen und
                   Genießen.
                 </p>
 
@@ -118,8 +120,8 @@
                 >
                   <i class="bi bi-clock"></i>
                   <span>
-                    Montag 7:00-16:00 · Mittwoch-Samstag 7:00-16:00 · Sonn-
-                    &amp; Feiertage 8:00-17:00 · Dienstag Ruhetag
+                    Montag 7:00–16:00 · Mittwoch–Samstag 7:00–16:00 · Sonn-
+                    &amp; Feiertage 8:00–17:00 · Dienstag Ruhetag
                   </span>
                 </div>
 
@@ -148,59 +150,45 @@
               </div>
             </div>
 
-            <div class="col-lg-6 swiper-col">
-              <div
-                class="swiper hero-swiper init-swiper"
-                data-aos="zoom-out"
-                data-aos-delay="100"
-              >
-                <script type="application/json" class="swiper-config">
-                  {
-                    "loop": true,
-                    "speed": 800,
-                    "autoplay": {
-                      "delay": 5000
-                    },
-                    "effect": "fade",
-                    "slidesPerView": 1,
-                    "navigation": {
-                      "nextEl": ".swiper-button-next",
-                      "prevEl": ".swiper-button-prev"
-                    }
-                  }
-                </script>
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="img-container">
-                      <img
-                        src="assets/img/restaurant/misc-square-1.webp"
-                        alt="Restaurant Ambience"
-                      />
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="img-container">
-                      <img
-                        src="assets/img/restaurant/misc-square-2.webp"
-                        alt="Signature Dish"
-                      />
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="img-container">
-                      <img
-                        src="assets/img/restaurant/misc-square-3.webp"
-                        alt="Expert Chefs"
-                      />
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-button-next"></div>
-                <div class="swiper-button-prev"></div>
+            <!-- Right: single video (no swiper) -->
+            <div
+              class="col-lg-6 video-col"
+              data-aos="zoom-out"
+              data-aos-delay="100"
+            >
+              <div class="video-container">
+                <video
+                  class="hero-video"
+                  autoplay
+                  preload="metadata"
+                >
+                  <source src="reel1.mp4" type="video/mp4" />
+                </video>
               </div>
             </div>
           </div>
         </div>
+
+        <style>
+          .video-container {
+            width: 100%;
+            height: 100%;
+            min-height: 420px; /* adjust */
+            overflow: hidden;
+          }
+          .hero-video {
+            width: 100%;
+            height: 100%;
+            display: block;
+            object-fit: cover;
+          }
+
+          @media (max-width: 991.98px) {
+            .video-container {
+              min-height: 280px;
+            }
+          }
+        </style>
       </section>
       <!-- /Hero Section -->
 
@@ -1340,10 +1328,8 @@
               <div class="col-12">
                 <h4>Rechtliches</h4>
                 <ul>
-                  <li><a href="#">Datenschutzerklärung</a></li>
-                  <li><a href="#">Geschäftsbedingungen</a></li>
-                  <li><a href="#">Impressum</a></li>
-                  <li><a href="#">Cookie-Richtlinie</a></li>
+                  <li><a href="./data-policy.html">Datenschutzerklärung</a></li>
+                  <li><a href="./imprint.html">Impressum</a></li>
                 </ul>
               </div>
             </div>
