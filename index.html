@@ -207,7 +207,7 @@
       <!-- About Section -->
       <section id="about" class="about section">
         <div class="container" data-aos="fade-up" data-aos-delay="100">
-          <div class="row align-items-center gy-4">
+          <div style="padding-bottom: 40px" class="row align-items-center gy-4">
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
               <div class="about-content">
                 <h2>Unsere kulinarische Reise</h2>
@@ -229,21 +229,43 @@
             <div class="col-lg-6" data-aos="zoom-in" data-aos-delay="300">
               <div class="about-image-wrapper">
                 <img
-                  src="assets/img/restaurant/showcase-4.webp"
+                  src="1.jpeg"
                   class="img-fluid main-image shadow"
                   alt="Restaurantinnenraum"
                 />
                 <img
-                  src="assets/img/restaurant/showcase-2.webp"
+                  src="2.jpeg"
                   class="img-fluid accent-image shadow"
                   alt="Chef bereitet Essen zu"
                 />
                 <span
                   class="establishment-year d-flex align-items-center justify-content-center text-center"
-                  >Est. 2025</span
                 >
+                  Est. 2025
+                </span>
               </div>
             </div>
+
+            <style>
+              /* Desktop crop */
+              @media (min-width: 992px) {
+                .about-image-wrapper .main-image,
+                .about-image-wrapper .accent-image {
+                  width: 100%;
+                  object-fit: cover;
+                  object-position: center;
+                  display: block;
+                }
+
+                /* adjust these heights as needed */
+                .about-image-wrapper .main-image {
+                  height: 420px;
+                }
+                .about-image-wrapper .accent-image {
+                  height: 220px;
+                }
+              }
+            </style>
           </div>
 
           <div class="row mt-5 pt-4 features-section">
@@ -629,8 +651,8 @@
 
                   <div class="col-12 col-md-7">
                     <div class="chef-details">
-                      <!-- <h3>Exekutivkoch</h3> -->
-                      <h2>Gabriel Turner</h2>
+                      <h3>Exekutivköchin</h3>
+                      <h2 style="margin-top: 10px">Filiz Öncebe</h2>
 
                       <!-- <div class="chef-awards">
                         <span
@@ -644,10 +666,11 @@
                       </div> -->
 
                       <p>
-                        Ob Frühstücksrunde, Familienfeier oder kleines Event -
-                        wir unterstützen Sie gerne bei der Planung. Kontaktieren
-                        Sie uns, und gemeinsam besprechen wir Ihre Wünsche und
-                        Vorstellungen.
+                        Filiz Öncebe steht für ehrliche Küche und traditionelle
+                        türkische Rezepte, die mit Erfahrung, Sorgfalt und viel
+                        Herz zubereitet werden. Ihre Leidenschaft gilt dem
+                        Frühstück - frisch, ausgewogen und so, wie man es von zu
+                        Hause kennt.
                       </p>
 
                       <!-- <div class="chef-signature">
@@ -1281,10 +1304,18 @@
         <div class="row gy-4">
           <div class="col-lg-5 col-md-12 footer-about">
             <a href="index.html" class="logo d-flex align-items-center">
-              <span class="sitename">ABLA'S FRÜHSTÜCK</span>
+              <img src="./logo-ablas.png" alt="" />
+              <span style="font-size: 25px; margin-top: 10px" class="sitename"
+                >ABLA'S FRÜHSTÜCK</span
+              >
             </a>
-            <p>Immer frisch und Immer lecker!</p>
-            <div class="social-links d-flex mt-4">
+            <p>
+              Wir verbinden Qualität, Vertrauen und Herzlichkeit. Unser
+              Unternehmen steht für zuverlässigen Service, ehrliche Arbeit und
+              den respektvollen Umgang mit Menschen aus allen Kulturen.
+            </p>
+
+            <div class="social-links row p-2">
               <a
                 href="https://www.tiktok.com/@ablas2025/"
                 target="_blank"
@@ -1304,26 +1335,31 @@
             </div>
           </div>
 
-          <!-- <div class="col-lg-2 col-6 footer-links">
-            <h4>Nützliche Links</h4>
-            <ul>
-              <li><a href="#">Startseite</a></li>
-              <li><a href="#">Über Uns</a></li>
-              <li><a href="#">Dienstleistungen</a></li>
-              <li><a href="#">Nutzungsbedingungen</a></li>
-              <li><a href="#">Datenschutzrichtlinie</a></li>
-            </ul>
-          </div> -->
-
           <div class="col-lg-2 col-6 footer-links">
-            <h4>Unsere Dienstleistungen</h4>
-            <ul>
-              <li><a href="#">Webdesign</a></li>
-              <li><a href="#">Webentwicklung</a></li>
-              <li><a href="#">Produktverwaltung</a></li>
-              <li><a href="#">Marketing</a></li>
-              <li><a href="#">Grafikdesign</a></li>
-            </ul>
+            <div class="row">
+              <div class="col-12">
+                <h4>Rechtliches</h4>
+                <ul>
+                  <li><a href="#">Datenschutzerklärung</a></li>
+                  <li><a href="#">Geschäftsbedingungen</a></li>
+                  <li><a href="#">Impressum</a></li>
+                  <li><a href="#">Cookie-Richtlinie</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-12 footer-contact">
+            <h4>Kontaktieren Sie uns</h4>
+            <p>Mayerner Str. 1</p>
+            <p>56070 Koblenz</p>
+            <p>Deutschland</p>
+            <p class="mt-4">
+              <strong>Telefon:</strong> <span>+49 26139052717</span>
+            </p>
+            <p>
+              <strong>E-Mail:</strong> <span>ablasfruehstueck@hotmail.com</span>
+            </p>
           </div>
         </div>
       </div>
