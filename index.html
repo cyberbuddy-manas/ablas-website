@@ -161,7 +161,10 @@
                   class="hero-video"
                   autoplay
                   muted
+                  loop
+                  playsinline
                   preload="metadata"
+                  webkit-playsinline
                 >
                   <source src="reel1.mp4" type="video/mp4" />
                 </video>
@@ -628,7 +631,10 @@
                 data-aos-delay="200"
               >
                 <div class="row g-4 align-items-start">
-                  <div style="height: 600px; overflow: hidden;" class="col-12 col-md-5">
+                  <div
+                    style="height: 600px; overflow: hidden"
+                    class="col-12 col-md-5"
+                  >
                     <figure class="chef-image m-0">
                       <img
                         src="abla.jpeg"
@@ -662,7 +668,11 @@
                         Hause kennt.
                       </p>
 
-                      <img style="width: 300px; height: auto;" src="signature.png" alt="">
+                      <img
+                        style="width: 300px; height: auto"
+                        src="signature.png"
+                        alt=""
+                      />
 
                       <!-- <div class="chef-signature">
                         <img
@@ -1435,6 +1445,14 @@
         window.addEventListener("load", hide);
         document.addEventListener("DOMContentLoaded", hide);
       })();
+
+      window.addEventListener("load", () => {
+        document.querySelectorAll(".hero-video").forEach((v) => {
+          v.muted = true;
+          v.playsInline = true;
+          v.play().catch(() => {});
+        });
+      });
     </script>
   </body>
 </html>
