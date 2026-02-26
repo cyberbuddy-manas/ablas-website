@@ -142,7 +142,11 @@
                 </div>
 
                 <div class="btn-group">
-                  <a href="https://drive.google.com/file/d/1MJiNAHw5W6ukd1Muxkhvw-8KWQusYtHF/view?usp=sharing" class="btn btn-book">Speisekarte</a>
+                  <a
+                    href="https://drive.google.com/file/d/1MJiNAHw5W6ukd1Muxkhvw-8KWQusYtHF/view?usp=sharing"
+                    class="btn btn-book"
+                    >Speisekarte</a
+                  >
                 </div>
 
                 <div class="social-links">
@@ -277,10 +281,10 @@
           </div>
 
           <div class="row mt-5 pt-4 features-section">
-            <!-- Elfsight Google Reviews | Untitled Google Reviews -->
+            <!-- Elfsight Google Reviews | Ablas -->
             <script src="https://elfsightcdn.com/platform.js" async></script>
             <div
-              class="elfsight-app-1f1fe797-a679-47fc-895e-6fa551ec31e4"
+              class="elfsight-app-f69d0ab6-bb67-4bc8-ac82-45a511bffd14"
               data-elfsight-app-lazy
             ></div>
           </div>
@@ -1395,65 +1399,5 @@
 
     <!-- Main JS File -->
     <script src="assets/js/main.js"></script>
-
-    <script>
-      // Hide "Free Google Reviews Widget" branding (Elfsight) + any floating badge
-      (() => {
-        const hide = () => {
-          const selectors = [
-            'a[title*="Elfsight branding" i]',
-            'div[title*="Elfsight branding" i]',
-            '*[class*="elfsight" i] a[title*="branding" i]',
-            '*[class*="elfsight" i] div[title*="branding" i]',
-            '*[id*="elfsight" i] a[title*="branding" i]',
-            '*[id*="elfsight" i] div[title*="branding" i]',
-            'a[aria-label*="Free Google Reviews Widget" i]',
-            'div[aria-label*="Free Google Reviews Widget" i]',
-            'a[title*="Free Google Reviews Widget" i]',
-            'div[title*="Free Google Reviews Widget" i]',
-            'a[aria-label*="Free Instagram Feed Widget" i]',
-            'div[aria-label*="Free Instagram Feed Widget" i]',
-            'a[title*="Free Instagram Feed Widget" i]',
-            'div[title*="Free Instagram Feed Widget" i]',
-          ];
-
-          selectors.forEach((sel) => {
-            document.querySelectorAll(sel).forEach((el) => {
-              el.style.setProperty("display", "none", "important");
-              el.style.setProperty("visibility", "hidden", "important");
-              el.style.setProperty("opacity", "0", "important");
-              el.style.setProperty("pointer-events", "none", "important");
-            });
-          });
-
-          // text fallback: remove any node that literally contains that label
-          document.querySelectorAll("a, div, span, p").forEach((el) => {
-            const t = (el.textContent || "").trim().toLowerCase();
-            if (t === "free google reviews widget") {
-              el.style.setProperty("display", "none", "important");
-            }
-          });
-        };
-
-        hide();
-
-        const obs = new MutationObserver(hide);
-        obs.observe(document.documentElement, {
-          childList: true,
-          subtree: true,
-        });
-
-        window.addEventListener("load", hide);
-        document.addEventListener("DOMContentLoaded", hide);
-      })();
-
-      window.addEventListener("load", () => {
-        document.querySelectorAll(".hero-video").forEach((v) => {
-          v.muted = true;
-          v.playsInline = true;
-          v.play().catch(() => {});
-        });
-      });
-    </script>
   </body>
 </html>
